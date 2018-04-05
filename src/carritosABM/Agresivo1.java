@@ -9,9 +9,5 @@ public class Agresivo1 extends Carro {
 	}
 	
 	
-	@Override
-	void stepMove() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }

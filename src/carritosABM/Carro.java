@@ -22,9 +22,6 @@ public abstract class Carro {
 		this.pista = space;
 	}
 	
-	@ScheduledMethod(start=1,interval=1,priority=100,shuffle=true)
-	abstract void stepMove() ;
-	
 	
 
 }
