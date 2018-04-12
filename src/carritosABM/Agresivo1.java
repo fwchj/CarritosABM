@@ -20,6 +20,10 @@ public class Agresivo1 extends Carro {
 			// Buscar el vecino mas cercano
 			Carro vecino  = buscarVecinoMasCercano();
 			
+			// Definimos el vecino mas cercano como la victima
+			this.victima = vecino;
+			
+			
 			double angulo = SpatialMath.calcAngleFor2DMovement(pista,pista.getLocation(this) ,pista.getLocation(vecino));
 			angulo = Math.toDegrees(angulo);
 			
@@ -34,7 +38,24 @@ public class Agresivo1 extends Carro {
 			if(diff<=Carro.maxangle) {
 				this.orientacion = angulo;
 			}
+			else { 
+				double diff2 = angulo - this.orientacion;
+				
+				if( diff2>180 | (diff2<0 & diff2>-180)) { // girar a la derecha
+					this.orientacion -= Carro.maxangle;
+				}
+				else { // girar a la izquierda 
+					this.orientacion += Carro.maxangle;
+				}
+				
+			}
 			
+			if(this.orientacion<0) {
+				this.orientacion +=360;
+			}
+			else if(this.orientacion>360) { 
+				this.orientacion -=360;
+			}
 			
 	}
 	

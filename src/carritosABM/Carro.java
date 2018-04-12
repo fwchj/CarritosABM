@@ -13,7 +13,8 @@ public abstract class Carro {
 	boolean 		agresivo;
 	double 			orientacion;
 	double 			puntos;
-	static double 	maxangle = 45;
+	static double 	maxangle;
+	Carro			victima;
 	HashMap<Carro,Integer> red;
 	
 	public ContinuousSpace pista;
@@ -27,6 +28,29 @@ public abstract class Carro {
 	public void stepDecision() {
 		
 		this.decideMove();
+		
+	}
+	@ScheduledMethod(start=1,interval=1,shuffle=true,priority=90)
+	public void stepMoverse() {
+		this.pista.moveByVector(this, this.velocidad, Math.toRadians(this.orientacion),0);
+		
+	}
+	
+	@ScheduledMethod(start=1,interval=1,shuffle=true,priority=80)
+	public void crash() {
+		
+		// Buscamos al carrito mas cercano y vemos si es un choque
+		Carro vecino = buscarVecinoMasCercano();
+		
+		// Vemos si es un choque
+		double distancia = pista.getDistance(pista.getLocation(this),pista.getLocation(vecino));
+		if(distancia<1) { 
+			// FIXME: estamos aqui
+		}
+		
+		
+		
+		
 		
 	}
 
@@ -47,6 +71,9 @@ public abstract class Carro {
 				vecino = (Carro)o;
 			}
 		}
+		
+		
+		
 		return vecino;
 	}
 	

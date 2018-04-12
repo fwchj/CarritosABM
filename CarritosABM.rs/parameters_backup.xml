@@ -12,12 +12,6 @@
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									
 		/>
-				<parameter name="numCarros" displayName="Numero de carritos" type="int" 
-						defaultValue="2" 
-						isReadOnly="false" 
-						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
-									
-		/>
 				<parameter name="vmax" displayName="Velocidad maxima" type="double" 
 						defaultValue="5.0" 
 						isReadOnly="false" 
