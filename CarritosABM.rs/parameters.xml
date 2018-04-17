@@ -7,19 +7,19 @@
 									
 		/>
 				<parameter name="aceleracion" displayName="Aceleracion" type="double" 
-						defaultValue="1.0" 
+						defaultValue="0.2" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									
 		/>
 				<parameter name="numCarros" displayName="Numero de carritos" type="int" 
-						defaultValue="2" 
+						defaultValue="20" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
 									
 		/>
 				<parameter name="vmax" displayName="Velocidad maxima" type="double" 
-						defaultValue="5.0" 
+						defaultValue="1.0" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									
