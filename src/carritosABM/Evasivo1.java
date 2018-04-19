@@ -3,14 +3,13 @@ package carritosABM;
 import repast.simphony.space.SpatialMath;
 import repast.simphony.space.continuous.ContinuousSpace;
 
-public class Agresivo1 extends Carro {
+	public class Evasivo1 extends Carro {
 
-	public Agresivo1(ContinuousSpace space) { 
+	public Evasivo1(ContinuousSpace space) { 
 		super(space);
-		this.agresivo = true;
-		
+		this.agresivo = false;
 	}
-
+	
 	@Override
 	public void decideMove() {
 		
@@ -22,12 +21,14 @@ public class Agresivo1 extends Carro {
 			// Buscar el vecino mas cercano
 			Carro vecino  = buscarVecinoMasCercano();
 			
-			// Definimos el vecino mas cercano como la victima
-			this.victima = vecino;
-			
 			
 			double angulo = SpatialMath.calcAngleFor2DMovement(pista,pista.getLocation(this) ,pista.getLocation(vecino));
 			angulo = Math.toDegrees(angulo);
+			// Agregamos 180 grados para huir del vecino
+			angulo +=180;
+			if(angulo>360) { // para asegurarnos de no tener mas de 360 grados
+				angulo -=360;
+						}
 			
 			double diff = Math.abs(this.orientacion - angulo);
 			
@@ -60,13 +61,5 @@ public class Agresivo1 extends Carro {
 			}
 			
 	}
-	
-	
-	
+
 }
-
-
-
-
-
-

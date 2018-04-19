@@ -12,8 +12,14 @@
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									
 		/>
-				<parameter name="numCarros" displayName="Numero de carritos" type="int" 
-						defaultValue="20" 
+				<parameter name="numCarrosAgresivo" displayName="Numero de carritos agresivos" type="int" 
+						defaultValue="10" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="numCarrosEvasivo" displayName="Numero de carritos evasivo" type="int" 
+						defaultValue="10" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
 									
@@ -30,6 +36,21 @@
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									
 		/>
+		<parameter name="probAmigos" displayName="Probabilidad de amigos" type="double" 
+						defaultValue="0.3" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"				
+		/>
 		</parameters>
+
+
+
+
+
+
+
+
+
+
 
 

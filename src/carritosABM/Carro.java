@@ -19,13 +19,14 @@ public abstract class Carro {
 	Carro			victima;
 	Carro 			ultimoChoque;
 	int 			ultimoControlChoque;
-	HashMap<Carro,Integer> red;
+	HashMap<Carro,Integer> red = new HashMap<Carro,Integer>();
 	
 	public ContinuousSpace pista;
 	
 	
 	public Carro(ContinuousSpace space) {
 		this.pista = space;
+		this.orientacion = RandomHelper.nextDoubleFromTo(0, 360);
 	}
 	
 	@ScheduledMethod(start=1,interval=1,shuffle=true,priority=100)
@@ -139,6 +140,11 @@ public abstract class Carro {
 		return this.puntos;
 	}
 	
+	
+	public String getLabel() {
+		String resultado = String.format("%3.0f | %3.2f", this.orientacion,this.velocidad);
+		return resultado;
+	}
 	
 	
 	

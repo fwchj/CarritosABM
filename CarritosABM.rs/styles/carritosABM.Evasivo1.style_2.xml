@@ -7,7 +7,7 @@
   <label></label>
   <labelMethod>getLabel</labelMethod>
   <labelPosition>bottom</labelPosition>
-  <labelPrecision>2</labelPrecision>
+  <labelPrecision>3</labelPrecision>
   <labelOffset>5.0</labelOffset>
   <labelFontSize>14</labelFontSize>
   <labelFontType>0</labelFontType>
@@ -18,8 +18,8 @@
     <float>0.0</float>
   </labelColor>
   <color>
-    <float>1.0</float>
     <float>0.0</float>
+    <float>0.4</float>
     <float>0.0</float>
   </color>
   <colorMax>
