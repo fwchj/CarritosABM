@@ -302,3 +302,21 @@ java.lang.NullPointerException
 	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
 	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
 	at java.awt.EventDispatchThread.run(Unknown Source)
+INFO  [AWT-EventQueue-0] 2018-05-03 10:30:47,293 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\repastData\config.props
+INFO  [AWT-EventQueue-0] 2018-05-03 10:30:47,699 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Git\CarritosABM\batch\batch_params.xml to
+	C:\Users\Florian\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-1] 2018-05-03 10:31:09,230 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\Florian\AppData\Local\Temp\Florian_localhost8756705419278084497.zip to 
+C:\Users\Florian\AppData\Local\Temp\simphony_model_1525361466621 ...
+INFO  [SwingWorker-pool-2-thread-1] 2018-05-03 10:31:09,277 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-1] 2018-05-03 10:31:09,277 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0443
+INFO  [SwingWorker-pool-2-thread-1] 2018-05-03 10:31:09,277 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\Florian\AppData\Local\Temp\simphony_model_1525361466621\Florian_localhost8756705419278084497.zip
+INFO  [SwingWorker-pool-2-thread-1] 2018-05-03 10:31:09,904 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-3-thread-1] 2018-05-03 10:31:39,919 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\Florian\AppData\Local\Temp\simphony_model_1525361466621 for DONE:  no
+INFO  [pool-3-thread-1] 2018-05-03 10:32:09,933 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\Florian\AppData\Local\Temp\simphony_model_1525361466621 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-1] 2018-05-03 10:32:09,933 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1.0109
+INFO  [SwingWorker-pool-2-thread-1] 2018-05-03 10:32:09,995 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\Florian\AppData\Local\Temp\simphony_model_1525361466621
+INFO  [SwingWorker-pool-2-thread-1] 2018-05-03 10:32:10,011 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/repastData
+INFO  [SwingWorker-pool-2-thread-1] 2018-05-03 10:32:10,386 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0076
+INFO  [SwingWorker-pool-2-thread-1] 2018-05-03 10:32:10,386 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1.0630

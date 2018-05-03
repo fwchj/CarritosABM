@@ -1,0 +1,19 @@
+<repast.simphony.data2.engine.FileSinkDescriptor simphonyVersion="2.5.0">
+  <name>BaseDeDatos</name>
+  <dataSet>Datos individuales</dataSet>
+  <delimiter>,</delimiter>
+  <format>TABULAR</format>
+  <sourceIds class="linked-hash-set">
+    <string>ID</string>
+    <string>tick</string>
+    <string>run</string>
+    <string>random_seed</string>
+    <string>Puntos</string>
+    <string>Orientacion</string>
+    <string>Velocidad</string>
+    <string>X</string>
+    <string>Y</string>
+  </sourceIds>
+  <fileName>ModelOutput.txt</fileName>
+  <addTimeStamp>false</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>

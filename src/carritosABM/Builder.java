@@ -66,6 +66,9 @@ ContinuousSpaceFactoryFinder.createContinuousSpaceFactory(null);
 			 Carro.vmax			= params.getDouble("vmax");
 			 Carro.maxangle		= params.getDouble("anguloMax");
 			 
+			 // para el batch-mode, tenemos que indicar hasta que periodo correr
+			 RunEnvironment.getInstance().endAt(1000);
+			 
 			 return context;
 			 
 			 

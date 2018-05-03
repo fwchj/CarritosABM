@@ -1,0 +1,71 @@
+<repast.simphony.data2.engine.DataSetDescriptor simphonyVersion="2.5.0">
+  <name>Datos individuales</name>
+  <type>NON_AGGREGATE</type>
+  <sourceType>carritosABM.Agresivo1</sourceType>
+  <inclTick>true</inclTick>
+  <inclBatchRun>true</inclBatchRun>
+  <inclRandomSeed>true</inclRandomSeed>
+  <scheduleParams>
+    <start>1.0</start>
+    <interval>1.0</interval>
+    <priority>-Infinity</priority>
+    <pType>LAST</pType>
+    <duration>-1.0</duration>
+    <frequency>REPEAT</frequency>
+    <hashCode>-1195357048</hashCode>
+  </scheduleParams>
+  <atEnd>false</atEnd>
+  <methodDataSources class="linked-hash-map">
+    <entry>
+      <string>Puntos</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>Puntos</id>
+        <className>carritosABM.Agresivo1</className>
+        <methodName>getPuntos</methodName>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>ID</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>ID</id>
+        <className>carritosABM.Agresivo1</className>
+        <methodName>getID</methodName>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>Orientacion</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>Orientacion</id>
+        <className>carritosABM.Agresivo1</className>
+        <methodName>getOrientacion</methodName>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>Velocidad</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>Velocidad</id>
+        <className>carritosABM.Agresivo1</className>
+        <methodName>getVelocidad</methodName>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>X</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>X</id>
+        <className>carritosABM.Agresivo1</className>
+        <methodName>getX</methodName>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>Y</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>Y</id>
+        <className>carritosABM.Agresivo1</className>
+        <methodName>getY</methodName>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+  </methodDataSources>
+  <countSources class="linked-hash-map"/>
+  <customNADataSources class="linked-hash-map"/>
+  <customAggDataSources class="linked-hash-map"/>
+</repast.simphony.data2.engine.DataSetDescriptor>

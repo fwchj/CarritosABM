@@ -9,11 +9,16 @@ import repast.simphony.space.continuous.ContinuousSpace;
 
 
 public abstract class Carro {
+	
+	int 			ID;
+	static int		maxID;
+	/** Velocidad actual del carrito en metros por segundo */
 	double 			velocidad;
 	static double 	vmax;
 	static double 	acceleracion;
 	boolean 		agresivo;
-	double 			orientacion;
+	/** Orientacion del vehiculo en grados. 0 grados es hacia la derecha. */
+	double 			orientacion; 
 	double 			puntos;
 	static double 	maxangle;
 	Carro			victima;
@@ -25,7 +30,8 @@ public abstract class Carro {
 	
 	
 	public Carro(ContinuousSpace space) {
-		this.pista = space;
+		this.ID 	= ++maxID;
+		this.pista 	= space;
 		this.orientacion = RandomHelper.nextDoubleFromTo(0, 360);
 	}
 	
@@ -70,6 +76,11 @@ public abstract class Carro {
 		
 	}
 
+	/**
+	 * Simula lo choques entre vehiculos
+	 * @param vecino identifica el carro con el cual choco
+	 * @param velocidadVecino la velocidad del vecino justo antes del choque
+	 */
 	private void postCrash(Carro vecino, double velocidadVecino) {
 		// Puntos
 		double puntosRonda = 0.0;
@@ -111,10 +122,17 @@ public abstract class Carro {
 		
 	}
 
+	/**
+	 * El carro se mueve de acuerdo a la velocidad y la orientacion que 
+	 * se determino antes. 
+	 */
 	public abstract void decideMove();
 	
 
-	
+	/**
+	 * Este metodo busca el vecino mas cercano y lo regresa
+	 * @return el vecino mas cercano
+	 */
 	public Carro buscarVecinoMasCercano() {
 		Carro vecino = null;
 		double distanciaMinima = Double.MAX_VALUE;
@@ -134,6 +152,25 @@ public abstract class Carro {
 		return vecino;
 	}
 	
+	
+	public int getID() {
+		return this.ID;
+	}
+	
+	public double getVelocidad() {
+		return this.velocidad;
+	}
+	
+	public double getOrientacion() {
+		return this.orientacion;
+	}
+	
+	public double getX() {
+		return this.pista.getLocation(this).getX();
+	}
+	public double getY() {
+		return this.pista.getLocation(this).getY();
+	}
 	
 	
 	public double getPuntos() {
