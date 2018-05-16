@@ -25,6 +25,7 @@ public abstract class Carro {
 	Carro 			ultimoChoque;
 	int 			ultimoControlChoque;
 	HashMap<Carro,Integer> red = new HashMap<Carro,Integer>();
+	String 			nameStrategy;
 	
 	public ContinuousSpace pista;
 	

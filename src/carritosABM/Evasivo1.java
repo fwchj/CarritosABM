@@ -8,6 +8,7 @@ import repast.simphony.space.continuous.ContinuousSpace;
 	public Evasivo1(ContinuousSpace space) { 
 		super(space);
 		this.agresivo = false;
+		this.nameStrategy ="Evasivo1";
 	}
 	
 	@Override

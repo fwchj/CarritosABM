@@ -8,7 +8,7 @@ public class Agresivo1 extends Carro {
 	public Agresivo1(ContinuousSpace space) { 
 		super(space);
 		this.agresivo = true;
-		
+		this.nameStrategy ="Agresivo1";
 	}
 
 	@Override
